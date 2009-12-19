@@ -27,7 +27,7 @@ if (!empty($about_text)) {
 ?>
 	<div id="carrington-about" class="widget">
 		<div class="about">
-			<h2 class="title"><?php printf(__('About %s', 'carrington-text'), get_bloginfo('name')); ?></h2>
+			<h2 class="title">About</h2>
 <?php
 	echo $about_text;
 ?>
