@@ -46,6 +46,7 @@ input, textarea, select {
 a, a:visited {
 	color: #00f;
 }
+a img {text-decoration:none; border: 0;}
 .clear {
 	clear: both;
 	display: block;
