@@ -18,11 +18,34 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
+/*
 if (have_posts()) {
 	while (have_posts()) {
 		the_post();
 		cfct_content();
 	}
+}
+*/
+
+if (have_posts()) {
+	//only output the content of the first post
+	the_post();
+	cfct_content();
+	
+	//leaving the remaining posts as excerpt
+	echo '<ol class="archive">';
+	while (have_posts()) {
+		the_post();
+?>
+	<li>
+<?php
+		cfct_excerpt();
+?>
+		<div id="post-content-<?php the_ID(); ?>-target"></div>
+	</li>
+<?php
+	}
+	echo '</ol>';
 }
 
 ?>
