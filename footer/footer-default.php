@@ -30,6 +30,11 @@ if (cfct_get_option('cfct_credit') == 'yes') {
 }
 ?>
 			<p style="text-align:center;"><img src="<?php bloginfo('template_url') ?>/img/apple_logo.png" /></p>
+			<?php 
+			    if (is_user_logged_in()) {
+			      printf( '<p style="text-align:center;">Loaded in %1$s seconds with %2$s database queries.</p>', timer_stop( 0, 3 ), get_num_queries() );
+			}
+			?>
 		</div><!--#footer -->
 	</div><!--#page-->
 	<?php wp_footer() ?>
