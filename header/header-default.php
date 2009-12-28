@@ -47,7 +47,7 @@ $blog_desc = get_bloginfo('description');
 
 <body>
 	<a href="http://github.com/foremire">
-	  <img alt="Fork me on GitHub" src="<?php bloginfo('template_url') ?>/img/forkme_red.png" style="position: fixed; top: 0pt; right: 0pt; border: 0pt none;">
+	  <img alt="Fork me on GitHub" src="<?php bloginfo('template_url') ?>/img/forkme_red.png" style="position: absolute; top: 0pt; right: 0pt; border: 0pt none;">
 	</a>
 <div id="page">
 	<p id="top"><a id="to-content" href="#content"><?php _e( 'Skip to content', 'carrington' ); ?></a></p>
